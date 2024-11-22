@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Profile Card</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body class="flex justify-center items-center min-h-screen bg-gray-100">
+    <div class="bg-white shadow-lg rounded-lg p-6 w-96 overflow-hidden">
+        <div class="flex flex-col items-center">
+            <img src="https://www.wikihow.com/images/9/90/What_type_of_person_are_you_quiz_pic.png" alt="Profile" class="w-32 h-32 rounded-full mb-4 object-cover">
+
+            <!-- Adjusted text elements for handling longer names and titles -->
+            <h2 class="text-2xl font-bold text-gray-800 break-words text-center leading-tight">Subin Jacob Madukkakuzhy</h2>
+            <p class="text-gray-600 text-center break-words leading-tight">Managing Director</p>
+            <p class="text-gray-600 text-center break-words leading-tight">Comglobal Projects India Pvt Ltd.</p>
+
+            <div class="mt-4 w-full">
+                <div class="flex items-center mb-2">
+                    <i class="fas fa-envelope mr-3 text-gray-600"></i>
+                    <span class="break-words">info@comglobalprojects.com</span>
+                </div>
+                <div class="flex items-center mb-2">
+                    <i class="fas fa-phone mr-3 text-gray-600"></i>
+                    <span class="break-words">+1 (555) 123-4567</span>
+                </div>
+                <div class="flex items-center mb-2">
+                    <i class="fas fa-map-marker-alt mr-3 text-gray-600"></i>
+                    <span class="break-words">Door No 101, Canal Road, Girinagar, Ernakulam, Kerala</span>
+                </div>
+                <div class="flex items-center mb-2">
+                    <i class="fas fa-globe mr-3 text-gray-600"></i>
+                    <a href="https://www.johndoe.com" class="text-blue-600 hover:underline break-words">www.johndoe.com</a>
+                </div>
+                <div class="flex items-center mb-2">
+                    <i class="fas fa-map-pin mr-3 text-gray-600"></i>
+                    <a href="https://maps.google.com" class="text-blue-600 hover:underline break-words">View Location</a>
+                </div>
+            </div>
+
+            <div class="mt-4 flex space-x-4">
+                <a href="https://facebook.com" target="_blank" class="text-blue-700 hover:text-blue-900">
+                    <i class="fab fa-facebook-f text-2xl"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" class="text-blue-400 hover:text-blue-600">
+                    <i class="fab fa-twitter text-2xl"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="text-pink-600 hover:text-pink-800">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="text-blue-500 hover:text-blue-700">
+                    <i class="fab fa-linkedin-in text-2xl"></i>
+                </a>
+                <a href="https://youtube.com" target="_blank" class="text-red-600 hover:text-red-800">
+                    <i class="fab fa-youtube text-2xl"></i>
+                </a>
+            </div>
+
+            <div class="mt-6 flex space-x-4">
+                <button onclick="downloadVCard()" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 flex items-center">
+                    <i class="fas fa-download mr-2"></i>Download Contact
+                </button>
+                <button onclick="copyProfileLink()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 flex items-center">
+                    <i class="fas fa-share-alt mr-2"></i>Share Contact
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function downloadVCard() {
+            const vcard = `BEGIN:VCARD
+VERSION:3.0
+FN:Johnathan Doe the Third
+TITLE:Senior Software Engineer
+ORG:TechCorp Solutions International Enterprises
+TEL:+1 (555) 123-4567
+EMAIL:johnathan.doe.longemailaddress@example.com
+ADR:123 Tech Lane, Silicon Valley, California, United States of America
+URL:https://www.johndoe.com
+END:VCARD`;
+
+            const blob = new Blob([vcard], { type: 'text/vcard' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'john_doe_contact.vcf';
+            link.click();
+        }
+
+        function copyProfileLink() {
+            const profileLink = 'https://www.johndoe.com';
+            navigator.clipboard.writeText(profileLink).then(() => {
+                alert('Profile link copied to clipboard!');
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
+
+<!-- <div class="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div> -->
