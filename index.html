@@ -1,115 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Iris Card</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900&display=swap");
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <style>
-        *{
-            font-family: "Raleway", sans-serif;
-        }
+      * {
+        font-family: "Raleway", sans-serif;
+      }
     </style>
     <!-- Background div with option for image or Tailwind class -->
-    <div class="min-h-screen flex items-center justify-center bg-gray-600" 
-         style="background-image: url('https://xmple.com/wallpaper/blue-cyan-gradient-linear-3840x2160-c2-06b7b4-061bb7-a-270-f-14.svg'); background-size: cover; background-position: center;">
-        <div class="text-cyan-700 rounded-lg p-6 w-full max-w-lg">
-            <div class="flex flex-col items-center space-y-4">
-                <div class="w-40 h-40">
-                    <img src="https://www.wikihow.com/images/9/90/What_type_of_person_are_you_quiz_pic.png" alt="Profile" class="w-full h-full rounded-full object-cover">
-                </div>
+    <div
+      class="min-h-screen flex items-center justify-center bg-gray-600"
+      style="
+        background-image: url('https://xmple.com/wallpaper/blue-cyan-gradient-linear-3840x2160-c2-06b7b4-061bb7-a-270-f-14.svg');
+        background-size: cover;
+        background-position: center;
+      "
+    >
+      <div class="text-cyan-700 rounded-lg p-6 w-full max-w-lg">
+        <div class="flex flex-col items-center space-y-4">
+          <div class="w-40 h-40">
+            <img
+              src="https://www.wikihow.com/images/9/90/What_type_of_person_are_you_quiz_pic.png"
+              alt="Profile"
+              class="w-full h-full rounded-full object-cover"
+            />
+          </div>
 
-                <!-- Details section -->
-                <div class="bg-white w-full p-4 rounded shadow">
-                    <h2 class="text-2xl font-bold break-words text-center leading-tight">Subin Jacob Madukkakuzhy</h2>
-                    <div class="mt-4 flex justify-center">
-                        <button onclick="downloadVCard()" class="bg-cyan-500 text-white px-4 py-2 rounded hover:bg-cyan-600 flex items-center">
-                            <i class="fas fa-download mr-2"></i>Download Contact
-                        </button>
-                    </div>
-                </div>
-
-                <div class="bg-white w-full p-4 rounded shadow">
-                    <p class="text-center break-words leading-tight">Managing Director</p>
-                    <p class="text-center break-words leading-tight">Comglobal Projects India Pvt Ltd.</p>
-                </div>
-
-                <div class="bg-white w-full p-4 rounded shadow">
-                    <div class="flex items-center">
-                        <i class="fas fa-envelope mr-3 text-cyan-800"></i>
-                        <span class="break-words">info@comglobalprojects.com</span>
-                    </div>
-                </div>
-
-                <div class="bg-white w-full p-4 rounded shadow">
-                    <div class="flex items-center">
-                        <i class="fas fa-phone mr-3 text-cyan-800"></i>
-                        <span class="break-words">+1 (555) 123-4567</span>
-                    </div>
-                </div>
-
-                <div class="bg-white w-full p-4 rounded shadow">
-                    <div class="flex items-center">
-                        <i class="fas fa-map-marker-alt mr-3 text-cyan-800"></i>
-                        <span class="break-words">Door No 101, Canal Road, Girinagar, Ernakulam, Kerala</span>
-                    </div>
-                </div>
-
-                <div class="bg-white w-full p-4 rounded shadow">
-                    <div class="flex items-center">
-                        <i class="fas fa-globe mr-2 text-cyan-800"></i>
-                        <a href="https://www.johndoe.com" class=" hover:underline break-words">www.subin.com</a>
-                    </div>
-                </div>
-
-                <div class="bg-white w-full p-4 rounded shadow">
-                    <div class="flex items-center">
-                        <i class="fas fa-map-pin mr-3 text-cyan-800"></i>
-                        <a href="https://maps.google.com" class=" hover:underline break-words">View Location</a>
-                    </div>
-                </div>
-
-                <div class="bg-white w-full p-4 rounded shadow">
-                    <div class="flex px-4 justify-between items-center">
-                        <a href="https://facebook.com" target="_blank" class="text-blue-700 hover:text-blue-900">
-                            <i class="fab fa-facebook-f text-2xl"></i>
-                        </a>
-                        <a href="https://twitter.com" target="_blank" class="text-blue-400 hover:text-blue-600">
-                            <i class="fab fa-twitter text-2xl"></i>
-                        </a>
-                        <a href="https://instagram.com" target="_blank" class="text-pink-600 hover:text-pink-800">
-                            <i class="fab fa-instagram text-2xl"></i>
-                        </a>
-                        <a href="https://linkedin.com" target="_blank" class="text-blue-500 hover:text-blue-700">
-                            <i class="fab fa-linkedin-in text-2xl"></i>
-                        </a>
-                        <a href="https://youtube.com" target="_blank" class="text-red-600 hover:text-red-800">
-                            <i class="fab fa-youtube text-2xl"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="mt-6 flex space-x-4">
-                    <button class="bg-white text-cyan-800 px-4 py-2 rounded hover:bg-cyan-600 flex items-center">
-                        <i class="fas fa-download mr-2"></i>Download Brochure
-                    </button>
-                    <button onclick="copyProfileLink()" class="bg-white text-cyan-800 px-4 py-2 rounded hover:bg-cyan-900 flex items-center">
-                        <i class="fas fa-share-alt mr-2"></i>Share Contact
-                    </button>
-                </div>
+          <!-- Details section -->
+          <div class="bg-white w-full p-4 rounded shadow">
+            <h2
+              class="text-2xl font-bold break-words text-center leading-tight"
+            >
+              Subin Jacob Madukkakuzhy
+            </h2>
+            <div class="mt-4 flex justify-center">
+              <button
+                onclick="downloadVCard()"
+                class="bg-cyan-500 text-white px-4 py-2 rounded hover:bg-cyan-600 flex items-center"
+              >
+                <i class="fas fa-download mr-2"></i>Download Contact
+              </button>
             </div>
+          </div>
+
+          <div class="bg-white w-full p-4 rounded shadow">
+            <p class="text-center break-words leading-tight">
+              Managing Director
+            </p>
+            <p class="text-center break-words leading-tight">
+              Comglobal Projects India Pvt Ltd.
+            </p>
+          </div>
+
+          <div class="bg-white w-full p-4 rounded shadow">
+            <div class="flex items-center">
+              <i class="fas fa-envelope mr-3 text-cyan-800"></i>
+              <span class="break-words">info@comglobalprojects.com</span>
+            </div>
+          </div>
+
+          <div class="bg-white w-full p-4 rounded shadow">
+            <div class="flex items-center">
+              <i class="fas fa-phone mr-3 text-cyan-800"></i>
+              <span class="break-words">+1 (555) 123-4567</span>
+            </div>
+          </div>
+
+          <div class="bg-white w-full p-4 rounded shadow">
+            <div class="flex items-center">
+              <i class="fas fa-map-marker-alt mr-3 text-cyan-800"></i>
+              <span class="break-words"
+                >Door No 101, Canal Road, Girinagar, Ernakulam, Kerala</span
+              >
+            </div>
+          </div>
+
+          <div class="bg-white w-full p-4 rounded shadow">
+            <div class="flex items-center">
+              <i class="fas fa-globe mr-2 text-cyan-800"></i>
+              <a
+                href="https://www.johndoe.com"
+                class="hover:underline break-words"
+                >www.subin.com</a
+              >
+            </div>
+          </div>
+
+          <div class="bg-white w-full p-4 rounded shadow">
+            <div class="flex items-center">
+              <i class="fas fa-map-pin mr-3 text-cyan-800"></i>
+              <a
+                href="https://maps.google.com"
+                class="hover:underline break-words"
+                >View Location</a
+              >
+            </div>
+          </div>
+
+          <div class="bg-white w-full p-4 rounded shadow">
+            <div class="flex px-4 justify-between items-center">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                class="text-blue-700 hover:text-blue-900"
+              >
+                <i class="fab fa-facebook-f text-2xl"></i>
+              </a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                class="text-blue-400 hover:text-blue-600"
+              >
+                <i class="fab fa-twitter text-2xl"></i>
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                class="text-pink-600 hover:text-pink-800"
+              >
+                <i class="fab fa-instagram text-2xl"></i>
+              </a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                class="text-blue-500 hover:text-blue-700"
+              >
+                <i class="fab fa-linkedin-in text-2xl"></i>
+              </a>
+              <a
+                href="https://youtube.com"
+                target="_blank"
+                class="text-red-600 hover:text-red-800"
+              >
+                <i class="fab fa-youtube text-2xl"></i>
+              </a>
+            </div>
+          </div>
+          <div class="mt-6 flex space-x-4">
+            <button
+              class="bg-white text-cyan-800 px-4 py-2 rounded hover:bg-cyan-600 flex items-center"
+            >
+              <i class="fas fa-download mr-2"></i>Download Brochure
+            </button>
+            <button
+              onclick="copyProfileLink()"
+              class="bg-white text-cyan-800 px-4 py-2 rounded hover:bg-cyan-900 flex items-center"
+            >
+              <i class="fas fa-share-alt mr-2"></i>Share Contact
+            </button>
+          </div>
         </div>
+      </div>
     </div>
+    <!-- Contact download section -->
 
     <script>
-        function downloadVCard() {
-            const vcard = `BEGIN:VCARD
+      function downloadVCard() {
+        const vcard = `BEGIN:VCARD
 VERSION:3.0
 FN:Johnathan Doe the Third
 TITLE:Senior Software Engineer
@@ -120,21 +180,24 @@ ADR:123 Tech Lane, Silicon Valley, California, United States of America
 URL:https://www.johndoe.com
 END:VCARD`;
 
-            const blob = new Blob([vcard], { type: 'text/vcard' });
-            const link = document.createElement('a');
-            link.href = URL.createObjectURL(blob);
-            link.download = 'john_doe_contact.vcf';
-            link.click();
-        }
+        const blob = new Blob([vcard], { type: "text/vcard" });
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = "john_doe_contact.vcf";
+        link.click();
+      }
 
-        function copyProfileLink() {
-            const profileLink = 'https://www.johndoe.com';
-            navigator.clipboard.writeText(profileLink).then(() => {
-                alert('Profile link copied to clipboard!');
-            }).catch(err => {
-                console.error('Failed to copy: ', err);
-            });
-        }
+      function copyProfileLink() {
+        const profileLink = "https://www.johndoe.com";
+        navigator.clipboard
+          .writeText(profileLink)
+          .then(() => {
+            alert("Profile link copied to clipboard!");
+          })
+          .catch((err) => {
+            console.error("Failed to copy: ", err);
+          });
+      }
     </script>
-</body>
+  </body>
 </html>
